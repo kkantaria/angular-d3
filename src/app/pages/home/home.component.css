@@ -1,0 +1,11 @@
+.mySvg{
+    background: #fff;
+    width: 100%;
+    height: 100%;
+}
+.paint-editor{
+    width: 100%;
+    margin: 0% auto;
+    border: 1px solid #ccc;
+    height: 500px;
+}

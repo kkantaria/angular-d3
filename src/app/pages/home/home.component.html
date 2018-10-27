@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-sm-1">
+        <app-top (chnageColor)="changeColor($event)" (chnageSize)="changeSize($event)"></app-top>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-1">
+        <app-left (chnageEvent)="changeComponent($event)"></app-left>
+    </div>
+    <div class="col-sm-10 col-paint">
+        <div class="paint-editor">
+            <svg #svg [ngClass]="{'is-drow': is_drag}" id="mysvg" class="svg mySvg" (click)="eClick($event)" (drop)="eDrop($event)" (dragover)="eDragover($event)"
+                (mouseup)="eMouseup($event)" (mousedown)="eMouseDown($event,svg)" (mouseleave)="eMouseLeave($event)" (mouseenter)="eMouseEnter($event)">
+            </svg>
+        </div>
+        <p class="test"></p>
+    </div>
+</div>

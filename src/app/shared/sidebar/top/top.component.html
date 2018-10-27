@@ -1,0 +1,10 @@
+<table class="table">
+    <tr>
+        <td><input class="color-box" (colorPickerClose)="changeColor()"  [(colorPicker)]="color" [style.background]="color"/></td>
+        <td>
+            <select [(ngModel)]="size" (change)="changeSize()">
+                <option *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]" value="{{item}}" >{{item}}</option>
+            </select>
+        </td>
+    </tr>
+</table>
