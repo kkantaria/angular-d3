@@ -1,10 +1,23 @@
 <table class="table">
     <tr>
-        <td [ngClass]="{'active':current_com=='pencil'}"><fa name="pencil" (click)="changeCom('pencil')" ></fa></td>
-        <td [ngClass]="{'active':current_com=='circle'}"><fa name="circle" (click)="changeCom('circle')"></fa></td>
+        <td [ngClass]="{'active':current_com=='pencil'}">
+            <fa name="pencil" (click)="changeCom('pencil')"></fa>
+        </td>
+        <td [ngClass]="{'active':current_com=='circle'}">
+            <fa name="circle" (click)="changeCom('circle')"></fa>
+        </td>
     </tr>
     <tr>
-        <td [ngClass]="{'active':current_com=='bcircle'}"><fa name="pencil" (click)="changeCom('bcircle')" ></fa></td>
-        <td [ngClass]="{'active':current_com=='bcircle'}"><fa name="circle-o" (click)="changeCom('bcircle')"></fa></td>
+        <td [ngClass]="{'active':current_com=='rectangle'}">
+            <fa name="square-o" (click)="changeCom('rectangle')"></fa>
+        </td>
+        <td [ngClass]="{'active':current_com=='bcircle'}">
+            <fa name="circle-o" (click)="changeCom('bcircle')"></fa>
+        </td>
+    </tr>
+    <tr>
+        <td [ngClass]="{'active':current_com=='line'}">
+            <fa name="minus" (click)="changeCom('line')"></fa>
+        </td>
     </tr>
 </table>

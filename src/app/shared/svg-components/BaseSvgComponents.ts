@@ -1,6 +1,6 @@
 import { BaseSvgService } from './base-svg.service';
 export abstract class BaseSvgComponents {
-    abstract create($e);
+    abstract create($e,data?:any[]);
     abstract close();
     base;
     constructor(base){

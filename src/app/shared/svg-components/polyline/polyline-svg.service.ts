@@ -12,7 +12,6 @@ export class PolylineSvgService extends BaseSvgComponents {
     super(base);
   }
   create(svg) {
-    console.log(this.base.getSvg());
       var polyline=this.base.getSvg().append("polyline")
       .attr("stroke",this.base.getStroke())
       .attr("stroke-width",this.base.getStrokeWidth())
