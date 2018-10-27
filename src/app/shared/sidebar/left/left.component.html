@@ -19,5 +19,8 @@
         <td [ngClass]="{'active':current_com=='line'}">
             <fa name="minus" (click)="changeCom('line')"></fa>
         </td>
+        <td [ngClass]="{'active':current_com=='triangle'}">
+            <fa name="caret-up" aria-hidden="false" (click)="changeCom('triangle')"></fa>
+        </td>
     </tr>
 </table>

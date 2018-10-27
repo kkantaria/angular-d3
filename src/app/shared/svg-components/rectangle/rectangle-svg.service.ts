@@ -46,7 +46,6 @@ export class RectangleSvgService extends BaseSvgComponents {
             this.setAttr("width",w);
             this.setAttr("height",h);
         }
-
     }
     close() {
         this.startX=null;

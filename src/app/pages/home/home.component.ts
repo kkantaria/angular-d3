@@ -6,6 +6,7 @@ import { CircleSvgService } from '../../shared/svg-components/circle/circle-svg.
 import { BaseSvgService } from '../../shared/svg-components/base-svg.service';
 import { BcircleSvgService } from './../../shared/svg-components/bcircle/bcircle-svg.service';
 import { RectangleSvgService } from '../../shared/svg-components/rectangle/rectangle-svg.service';
+import { TriangleSvgService } from '../../shared/svg-components/triangle/triangle-svg.service';
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
@@ -21,6 +22,7 @@ export class HomeComponent  implements OnInit {
         private bcircle:BcircleSvgService,
         private rectangle:RectangleSvgService,
         private line:LineSvgService,
+        private triangle:TriangleSvgService
     ) {
        
     }
@@ -45,6 +47,7 @@ export class HomeComponent  implements OnInit {
                 this.circle.create($e).setAttrs({ "cx": $e.offsetX, "cy": $e.offsetY})
                 break;
         }
+        console.log($e);
     }
     eDrop($e) {
 
@@ -65,7 +68,10 @@ export class HomeComponent  implements OnInit {
                 break;
             case "line":
                 this.line.close();
-                break;            
+                break;
+            case "triangle":
+                this.triangle.close();
+                break;                
         }
     }
     eMouseDown($e, $svg) {
@@ -81,7 +87,10 @@ export class HomeComponent  implements OnInit {
                 break;
             case "line":
                 this.line.create($svg,{"x":$e.offsetX,"y":$e.offsetY});
-                break;    
+                break;
+            case "triangle":
+                this.triangle.create($svg,{"x":$e.offsetX,"y":$e.offsetY});
+                break;
         }
     }
     eMouseLeave() {
